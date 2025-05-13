@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# Virtual environments
+venv/
+.env
+.env.*
+
+# IDEs
+.vscode/
+.idea/
+
+# Byte-compiled / optimized / DLL files
+*.so
+*.dll
+*.dylib
+*.pyd
+*.pyc
+*.pyo
+
+# Testing
+htmlcov/
+coverage.xml
+.cache/
+.pytest_cache/
+nosetests.xml
+test-results.xml
+
+# MyPy / Bandit / Pyright
+.mypy_cache/
+.pyre/
+.pytype/
+
+# MacOS
+.DS_Store
+
+# Pre-commit
+.pre-commit-config.yaml
+.pre-commit-hooks.yaml
