@@ -1,0 +1,31 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Vissu
+      POSTGRES_DB: contacts
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  app:
+    build: .
+    depends_on:
+      - db
+    environment:
+      FLASK_APP: run.py
+      FLASK_ENV: development
+      DEBUG: "True"
+      DATABASE_URL: postgresql://postgres:Vissu@db:5432/contacts
+      API_KEY: ma5m1xodcrl4ju1j
+    ports:
+      - "5050:5000"
+    volumes:
+      - .:/app
+    command: python run.py
+
+volumes:
+  pgdata:
