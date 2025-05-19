@@ -21,7 +21,7 @@
           "raw": "{\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\",\n  \"display_name\": \"JD\",\n  \"company_name\": \"Acme\",\n  \"record_type_name\": \"Lead\",\n  \"status_name\": \"Active\",\n  \"source_name\": \"Facebook\"\n}"
         },
         "url": {
-          "raw": "{{base_url}}/create",
+          "raw": "{{base_url}}/contacts",
           "host": ["{{base_url}}"],
           "path": ["create"]
         }
@@ -33,7 +33,7 @@
       "request": {
         "method": "GET",
         "url": {
-          "raw": "{{base_url}}/contact/:jnid",
+          "raw": "{{base_url}}/contacts/:jnid",
           "host": ["{{base_url}}"],
           "path": ["contact", ":jnid"]
         }
@@ -55,7 +55,7 @@
           "raw": "{\n  \"status_name\": \"Prospect\"\n}"
         },
         "url": {
-          "raw": "{{base_url}}/update/:jnid",
+          "raw": "{{base_url}}/contacts/:jnid",
           "host": ["{{base_url}}"],
           "path": ["update", ":jnid"]
         }
@@ -67,7 +67,7 @@
       "request": {
         "method": "DELETE",
         "url": {
-          "raw": "{{base_url}}/delete/:jnid",
+          "raw": "{{base_url}}/contacts/:jnid",
           "host": ["{{base_url}}"],
           "path": ["delete", ":jnid"]
         }

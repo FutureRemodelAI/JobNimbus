@@ -1,6 +1,7 @@
 # Python
 __pycache__/
 *.py[cod]
+*$py.class
 *.so
 *.egg
 *.egg-info/
@@ -10,8 +11,17 @@ build/
 
 # Env
 venv/
+ENV/
 .env
 *.env
+
+# Database files
+*.db
+
+# Flask
+instance/
+.webassets-cache
+flask_session/
 
 # IDEs
 .vscode/
@@ -21,13 +31,26 @@ venv/
 # Logs
 *.log
 
+# OS generated files
+.DS_Store
+Thumbs.db
+
 # Pytest cache
 .pytest_cache/
 cache/
 
-# Database files
-*.db
-*.sqlite3
-
 # Docker
 *.pid
+
+# Coverage reports
+.htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# unwanted files
+.pre-commit-config.yaml
+docker-compose.local.yml
+testing.py
