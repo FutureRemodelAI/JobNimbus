@@ -9,12 +9,17 @@ class Config:
     DEBUG = False
 
 
+# Local Development
 class DevelopmentConfig(Config):
     DEBUG = True
 
 
-class TestingConfig(Config):
-    TESTING = True
-    SQLALCHEMY_DATABASE_URI = os.getenv(
-        "TEST_DATABASE_URL", "postgresql://postgres:Vissu@localhost:5432/contacts_test_db"
-    )
+# Deployment
+class ProductionConfig(Config):
+    DEBUG = False
+    SQLALCHEMY_ECHO = False
+
+
+JOBNIMBUS_API_KEY = os.getenv("JOBNIMBUS_API_KEY")
+BASE_URL = "https://app.jobnimbus.com/api1"
+CONTACTS_ENDPOINT = f"{BASE_URL}/contacts"

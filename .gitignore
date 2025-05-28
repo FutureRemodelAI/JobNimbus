@@ -8,12 +8,14 @@ __pycache__/
 dist/
 build/
 .eggs/
+*.pyo
 
 # Env
 venv/
 ENV/
 .env
 *.env
+.venv/
 
 # Database files
 *.db

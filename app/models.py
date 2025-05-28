@@ -1,5 +1,3 @@
-import uuid
-
 from app.database import db
 
 
@@ -7,13 +5,7 @@ class Contact(db.Model):
     __tablename__ = "contacts"
 
     # id = db.Column(db.Integer, primary_key=True)
-    jnid = db.Column(
-        db.String(12),
-        unique=True,
-        primary_key=True,
-        nullable=False,
-        default=lambda: str(uuid.uuid4()).replace("-", "")[:12],
-    )
+    jnid = db.Column(db.String, primary_key=True)
     recid = db.Column(db.Integer, unique=True)
 
     # Basic info
